@@ -1,50 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Linux and opensource blog</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="css/styles.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="js/main.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assests/css/styles.css">
+    <title>Document</title>
 </head>
 <body>
+    <div class="main-container">
 
-<div class="header">
-  <a href="index.html"><img src="img/logo.png" alt="logo" width="256" height="256" /></a>
-  <p>A blog created by me.</p>
-</div>
 
-<div class="navbar">
-  <a href="index.html">Home</a>
-  <a href="blog.html">Blog</a>
-  <a href="about.html">About</a>
-  <a href="contact.html" class="right">Contact</a>
-</div>
-<hr>
-<div class="row">
-  <div class="main1">
-    <h2>Cheatsheet for new comers to Linux world.</h2>
-    <h5>Unix commands-line programs, Dec 11, 2018</h5>
-    <img src="img/bash-terminal.png" alt="image" width="300" height="300">
-    <p><b>Even though to some it might seem daunting to delve in the command-line programs, I think once you get accustomed with Linux, you will
-      want to learn more.</b></p>
-    <p>An A-Z of the Bash command line useful for systems that behave in a similar Unix (UNIX-like) manner. I have used a couple myself, like
-      apt-get to install packages in Ubuntu, bash in almost every distibution I tried, cat when installing Arch Linux one time on my laptop,
-      dd to make usb keys in command line and many others like the ones underneath.
-    </p>
-    <p>a:</p>
-    <ul>
-      <li>alias - Creates an alias</li>
-      <li>apropos - Search the Help pages (man -k)</li>
-      <li>apt-get - Find and install software packages (Debian)</li>
-      <li>aspell - Spell checker</li>
-      <li>awk - Search and replace text, sort / validate / index database</li>
-    </ul>
+        <nav class="nav-container">
+            <ul class="nav">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./blog.html">Blog</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
 
-    <p>b:</p>
+        <div class="hero-image">
+            <div class="hero-left">some text</div>
+            <div class="hero-center">
+                <a href="index.html"><img src="assests/images/logo.png" alt="logo" width="300" height="200" /></a>
+            </div>
+            <div class="hero-right">texty</div>
+        </div>
+
+        <div class="main-section">
+            <aside class="aside-left"></aside>
+            <article class="article">
+                <h2>Cheatsheet for new comers to Linux world.</h2>
+                <h5>Unix commands-line programs, Feb 21, 2022</h5>
+                <img src="assests/images/bash-terminal.png" alt="image" width="200" height="200">
+            <p><b>Even though to some it might seem daunting to delve in the command-line programs, I think once you get accustomed with Linux, you will
+            want to learn more.</b></p>
+            <p>An A-Z of the Bash command line useful for systems that behave in a similar Unix (UNIX-like) manner. I have used a couple myself, like
+            apt-get to install packages in Ubuntu, bash in almost every distibution I tried, cat when installing Arch Linux one time on my laptop,
+            dd to make usb keys in command line and many others like the ones underneath.
+            </p>
+            <p>a:</p>
+            <ul>
+                <li>alias - Creates an alias</li>
+                <li>apropos - Search the Help pages (man -k)</li>
+                <li>apt-get - Find and install software packages (Debian)</li>
+                <li>aspell - Spell checker</li>
+                <li>awk - Search and replace text, sort / validate / index database</li>
+            </ul>
+
+            <p>b:</p>
     <ul>
       <li>bash - GNU Bourne-Again SHell</li>
       <li>bc - Calculator</li>
@@ -233,34 +238,14 @@
       <li>whoami   Print the current user id and name (`id -un’)</li>
       <li>wget     Retrieve web pages or files via HTTP, HTTPS or FTP</li>
     </ul>
-    </p>
-  </div>
-  <div class="main3">
-    <h2>How to Synchronize Time on a Linux Machine with NTP</h2>
-    <h5>terminal, Sep 2, 2017</h5>
-    <img src="img/ntp-tutorial.png" alt="image" width="300" height="200">
-    <p><b>Learn how to synchronize the clock on a linux server with a public server time.</b></p>
-    <p>A good server always shows the right clock. The best way to do this is so you can use any time server for synchronization. In this tutorial we will use a public one.
-    <p>System clock</p>
-    <p>The timing command is:</p>
-    <p># ntpdate pool.ntp.org</p>
-    <p>, where pool.ntp.org is the time server.</p>
-    <p>To always keep the server with the correct time, we'll schedule the synchronization procedure every night with crontab:</p>
-    <p># crontab -e</p>
-    <p>Add the line below to synchronize your clock every night at 00:00</p>
-    <p>0 0 * * * / usr / sbin / ntpdate pool.ntp.org</p>
-    <p>The hardware clock</p>
-    <p>The hardware clock</p>
-    <p>We modify the hardware clock to be the same as the system with the following command:</p>
-    <p>/ sbin / hwclock -systohc</p>
-    <p>You can also place this command in the crontab to run after the system clock has been synchronized.</p>
-  </div>
-  </div>
-</div>
-<hr>
-<div class="footer">
-  <h2>Copyright &copy; 2018</h2>
-</div>
+    </p>    
+            </article>
+            <aside class="aside-right"></aside>
+        </div>
 
+        <footer class="footer">fooooter</footer>
+
+
+    </div>
 </body>
 </html>
