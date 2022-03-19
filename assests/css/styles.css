@@ -1,8 +1,13 @@
 * {
-    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
   }
 
   body {
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     font-family: Arial;
     padding: 10px;
     background: #f1f1f1;
@@ -10,29 +15,46 @@
 
   /* Header/Blog Title */
   .header {
+    flex: 2;
+    flex-direction: row;
+    display: flex;
     padding: 30px;
-    text-align: center;
+    justify-content: center;
+    align-items: center;
     background: white;
   }
 
   .header h1 {
     font-size: 50px;
+    padding: 3rem;
+  }
+
+  .header p {
+    font-size: 16px;
+    text-align: center;
+    padding: 3rem;
   }
 
   /* Style the top navigation bar */
   .topnav {
+    flex: 0.5;
+    display: flex;
     overflow: hidden;
     background-color: #333;
   }
 
   /* Style the topnav links */
   .topnav a {
-    float: left;
-    display: block;
+    display: flex;
     color: #f2f2f2;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+  }
+
+  .topnav a > right {
+    display: flex;
+    justify-content: right;
   }
 
   /* Change color on hover */
@@ -41,19 +63,30 @@
     color: black;
   }
 
-  /* Create two unequal columns that floats next to each other */
+  .row {
+    flex: 7;
+    display: flex;
+    flex-direction: row;
+  }
+
   /* Left column */
   .leftcolumn {
-    float: left;
-    width: 75%;
+    flex: 8;
   }
 
   /* Right column */
   .rightcolumn {
-    float: left;
+    flex: 2;
     width: 25%;
     background-color: #f1f1f1;
     padding-left: 20px;
+  }
+
+  /* Fake image */
+  .fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
   }
 
   /* Add a card effect for articles */
@@ -63,15 +96,9 @@
     margin-top: 20px;
   }
 
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-
   /* Footer */
   .footer {
+    flex: 0.5;
     padding: 20px;
     text-align: center;
     background: #ddd;
